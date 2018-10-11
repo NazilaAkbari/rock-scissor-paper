@@ -1,3 +1,39 @@
 <html>
-<h1>Hello World</h1>
+<head>
+    <script type="application/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.3.0/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script type="application/javascript" src="app.js"></script>
+</head>
+
+<div id="result" hidden>
+    <h2 style="color: slategrey"><span id="playerOne" style="color: aqua"></span> Chose <span id="playerOneSelection" style="color: aqua"> </span> Win Count <span
+            id="playerOneWinCount" style="color: aqua"></span>
+        <br>
+        <span id="playerTwo" style="color: aqua"></span> Chose <span id="playerTwoSelection" style="color: aqua"> </span> Win Count <span
+                id="playerTwoWinCount" style="color: aqua"></span>
+        <br>
+        Winner is:
+        <span id="winnerName" style="color: aqua"></span>
+    </h2>
+</div>
+
+<div id="startDiv">
+    <h1 style="color: slategrey">Let's have fun <span id="name" style="color: brown"></span> You're Rank is <span id="rank" style="color:crimson"></span></h1>
+    <button id="start">Start New Game</button>
+</div>
+
+<div id="wait" hidden>
+    <h1 style="color: slategrey">Please Wait</h1>
+</div>
+
+<div id="play" hidden>
+    <h2 id="select" style="color: slategrey">Select:</h2>
+    <button id="rock">rock</button>
+    <button id="paper">paper</button>
+    <button id="scissor">scissor</button>
+</div>
+
+</body>
 </html>
