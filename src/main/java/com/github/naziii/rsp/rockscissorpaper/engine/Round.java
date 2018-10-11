@@ -25,6 +25,10 @@ public class Round {
         ONE, TWO, NONE
     }
 
+    /**
+     * @return badge of winner
+     * decides which player wins each round
+     */
     public PlayerBadge getWinnerPlayer() {
         if (playerOneSelection.equals(Selection.ROCK)) {
             if (playerTwoSelection.equals(Selection.ROCK))

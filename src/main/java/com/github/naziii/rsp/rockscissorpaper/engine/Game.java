@@ -27,20 +27,22 @@ public class Game {
             rounds.add(new Round());
     }
 
-    public boolean join(Player player) {
+    /**
+     * @param player adds second player to game
+     */
+    public void join(Player player) {
         if (Objects.isNull(playerTwo)) {
             this.playerTwo = player;
             this.ready = true;
             this.currentRound = rounds.poll();
-            return true;
-        }
-        throw new IllegalStateException("This Game Is Full");
+        } else
+            throw new IllegalStateException("This Game Is Full");
     }
 
     /**
      * @param player
      * @param selection
-     * @return
+     * @return handles player selection and changes game status to proper state
      */
     public GameState respond(Player player, Selection selection) {
         boolean finished = false;
@@ -80,10 +82,6 @@ public class Game {
             return new GameState(selectionMap, winner, playerWinNum, gameFinished);
         }
         return null;
-    }
-
-    public static int getGameRounds() {
-        return GAME_ROUNDS;
     }
 
     public UUID getId() {
